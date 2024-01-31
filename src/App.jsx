@@ -1,10 +1,13 @@
 import React from "react";
+import('tailwindcss').Config;
 import { Route, Router, Routes } from "react-router-dom";
 import Dashboard from "./pages/dashboard";
+import Sidebar from "./components/general/Sidebar";
 const App = () => {
+
   return (
     <Routes>
-      <Route path='/' element={<h1>/</h1>} />
+      <Route path='/' element={<Sidebar />} />
       <Route path='/dashboard' element={<Dashboard />} />
       <Route path='/approvals' element={<h1>/approvals</h1>} />
       <Route path='/warehouses' element={<h1>/warehouses</h1>} />
