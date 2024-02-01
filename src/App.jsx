@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import("tailwindcss").Config;
 import { Route, Router, Routes } from "react-router-dom";
+
+
 import Dashboard from "./pages/dashboard";
 import Sidebar from "./components/general/Sidebar";
+import Header from "./components/general/Header";
+
 const App = () => {
+  const [headerTitle,setHeaderTitle] = useState("Dashboard");
+
   return (
     <>
       <Sidebar />
+      <Header title={headerTitle} />
       <Routes>
         <Route path='/' element={<Sidebar />} />
         <Route path='/dashboard' element={<Dashboard />} />

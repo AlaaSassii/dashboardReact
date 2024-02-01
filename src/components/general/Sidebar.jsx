@@ -15,20 +15,23 @@ import SidebarLink from "./SidebarLink";
 
 const Sidebar = () => {
   return (
-    <div className='bg-black fixed p-50 text-white h-full w-[200px] flex flex-col'>
-      <img src={image} alt='logo' className='p-8' />
+    <div className="hidden md:block">
+      <div className='bg-black fixed p-50 text-white h-full w-[208px] flex flex-col items-center justify-center z-10  '>
+        <img src={image} width={120} height={150}  alt='logo' className='pt-5 pb-5' />
 
-      <div className='flex flex-col justify-center h-full overflow-y-auto'>
-        <SidebarLink title='Dashboard' icon={MdDashboard} />
-        <SidebarLink title='Approvais' icon={FaCheckCircle} />
-        <SidebarLink title='Warehouses' icon={FaHouseChimney} />
-        <SidebarLink title='Groups' icon={MdGroups} />
-        <SidebarLink title='Sites' icon={TbTableOptions} />
-        <SidebarLink title='Inventory' icon={MdInventory} />
-        <SidebarLink title='Machinery' icon={GiRobotGrab} />
-        <SidebarLink title='Receipts' icon={IoReceipt} />
-        <SidebarLink title='Sales' icon={AiFillDollarCircle} />
-        <SidebarLink title='Staffs' icon={FaUserGroup} />
+        <div className='flex flex-col  h-full overflow-y-hidden'>
+          <SidebarLink title='Dashboard' to="dashboard" icon={MdDashboard} />
+          <SidebarLink title='Approvais' to="approvais" icon={FaCheckCircle} />
+          
+          <SidebarLink title='Warehouses' to="warehouses" icon={FaHouseChimney} />
+          <SidebarLink title='Groups'    to="groups" icon={MdGroups} />
+          <SidebarLink title='Sites' to="sites" icon={TbTableOptions} />
+          <SidebarLink title='Inventory' to="inventory" icon={MdInventory} />
+          <SidebarLink title='Machinery' to="machinery" icon={GiRobotGrab} />
+          <SidebarLink title='Receipts' to="receipts" icon={IoReceipt} />
+          <SidebarLink title='Sales' to="sales" icon={AiFillDollarCircle} />
+          <SidebarLink title='Staffs' to="staffs" icon={FaUserGroup} />
+        </div>
       </div>
     </div>
   );
