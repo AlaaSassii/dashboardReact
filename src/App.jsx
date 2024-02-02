@@ -21,14 +21,15 @@ const App = () => {
   return (
     <>
       <MenuContext.Provider value={menuValue}>
-        <HeaderTitle.Provider value={titleHead}>
-          <Sidebar />
+      
+        <Sidebar />
+        <div className="w-full md:w-[calc(100%-208px)] md:ml-52 min-h-screen transition-all main">
           <Header title={headerTitle} />
           <Routes>
             <Route path='/' element={<Sidebar />} />
-            <Route path='/dashboard' element={<Dashboard />} />
-            <Route path='/approvals' element={<Approvals />} />
-            <Route path='/warehouses' element={<Input />} />
+            <Route path='/dashboard' element={<Dashboard/>} />
+            <Route path='/approvals' element={<Approvais />} />
+            <Route path='/warehouses' element={<h1>/warehouses</h1>} />
             <Route path='/groups' element={<h1>/groups</h1>} />
             <Route path='/sites' element={<h1>/sites</h1>} />
             <Route path='/inventory' element={<h1>/inventory</h1>} />
@@ -37,7 +38,9 @@ const App = () => {
             <Route path='/sales' element={<h1>/sales</h1>} />
             <Route path='/staffs' element={<h1>/staffs</h1>} />
           </Routes>
-        </HeaderTitle.Provider>
+        </div>
+      
+
       </MenuContext.Provider>
     </>
   );
