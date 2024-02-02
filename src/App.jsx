@@ -2,29 +2,24 @@ import React, { useState } from "react";
 import("tailwindcss").Config;
 import { Route, Router, Routes } from "react-router-dom";
 
-
 import Dashboard from "./pages/dashboard";
-import Approvais from "./pages/approvais";
+import Approvals from "./pages/approvais";
 
 import Sidebar from "./components/general/Sidebar";
 import Header from "./components/general/Header";
 import { MenuContext } from "./components/general/openMenu";
-import {HeaderTitle} from "./components/general/headerTitle";
-
-
+import { HeaderTitle } from "./components/general/headerTitle";
+import Input from "./components/general/Input";
 
 const App = () => {
-  const [headerTitle,setHeaderTitle] = useState("Dashboard");
-  const [openMenu,setOpenMenu] = useState(false);
-  
-  const menuValue = {openMenu,setOpenMenu};
-  const titleHead = {headerTitle,setHeaderTitle};
+  const [headerTitle, setHeaderTitle] = useState("ala");
+  const [openMenu, setOpenMenu] = useState(false);
+
+  const menuValue = { openMenu, setOpenMenu };
+  const titleHead = { headerTitle, setHeaderTitle };
 
   return (
-
-
     <>
-      <HeaderTitle.Provider value={titleHead}>
       <MenuContext.Provider value={menuValue}>
       
         <Sidebar />
@@ -47,7 +42,6 @@ const App = () => {
       
 
       </MenuContext.Provider>
-      </HeaderTitle.Provider>
     </>
   );
 };

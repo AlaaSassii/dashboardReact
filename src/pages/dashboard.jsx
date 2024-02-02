@@ -30,7 +30,7 @@ const Dashboard = () => {
       </div>
       
       <div className="grid  grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 max-h-[50vh] p-4">
-        <TopProductsSales Warehouse={"Warehouse One"} Remaining={"0 rod"} Reorder={"1 rod"} RetailPricePerrod={"Rs. 100000"} />
+        <TopProductsSales Warehouse={"Warehouse One"} Remaining={"0000 rod"} Reorder={"1 rod"} RetailPricePerrod={"Rs. 100000"} />
         <TopProductsSales Warehouse={"Warehouse One"} Remaining={"0 rod"} Reorder={"1 rod"} RetailPricePerrod={"Rs. 100000"} />
         <TopProductsSales Warehouse={"Warehouse One"} Remaining={"0 rod"} Reorder={"1 rod"} RetailPricePerrod={"Rs. 100000"} />
         <TopProductsSales Warehouse={"Warehouse One"} Remaining={"0 rod"} Reorder={"1 rod"} RetailPricePerrod={"Rs. 100000"} />
