@@ -1,9 +1,16 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { IoMenuSharp } from "react-icons/io5";
 import { FaUserCircle } from "react-icons/fa";
 import { IoMdArrowDropdown } from "react-icons/io";
+import MenuContext from './openMenu';
+
+
+
 
 const Header = ({title}) => {
+  const {openMenu} = useContext(MenuContext);
+  const {setOpenMenu} = useContext(MenuContext);
+  
   return (
     <div className='
                 fixed
@@ -15,8 +22,10 @@ const Header = ({title}) => {
                 flex
                 justify-between
     '>
-        <div className='flex justify-center items-center '>
-            <IoMenuSharp size={26} />
+        <div  className='flex justify-center items-center cursor-pointer '>
+            <div onClick={() => {setOpenMenu(!openMenu)}} className='md:hidden hover:scale-105 transition '>
+              <IoMenuSharp size={26}  />
+            </div>
             <div className='ml-10 font-bold' >{title}</div>
         </div>
         
