@@ -21,9 +21,9 @@ const Sidebar = () => {
   const {setOpenMenu} = useContext(MenuContext);
 
   return (
-    <div className={`transition-transform duration-500 ease-in-out ${openMenu ? "hidden md:block":""}`}>
+    <div className={`transition-transform duration-500  ease-in-out ${openMenu ? "hidden md:block":""}`}>
   
-        <div className='bg-black fixed p-50 text-white h-full w-[208px] flex flex-col items-center justify-center z-10  '>
+        <div className='bg-black  fixed p-50 text-white h-full w-[208px] flex flex-col items-center justify-center z-30  '>
           
           <div className="absolute  text-white top-2 right-2 cursor-pointer hover:scale-105 transition  md:hidden" onClick={() => {setOpenMenu(!openMenu)}}>
             <IoCloseSharp  size={32}/>

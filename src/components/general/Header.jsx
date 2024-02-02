@@ -13,14 +13,7 @@ const Header = ({title}) => {
   
   return (
     <div className='
-                fixed
-                w-full
-                p-3
-                md:pl-56 
-                font-semibold  
-                shadow-md
-                flex
-                justify-between
+    py-2 px-6 bg-white flex justify-between items-center shadow-md shadow-black/5 sticky top-0 left-0 z-10
     '>
         <div  className='flex justify-center items-center cursor-pointer '>
             <div onClick={() => {setOpenMenu(!openMenu)}} className='md:hidden hover:scale-105 transition '>
