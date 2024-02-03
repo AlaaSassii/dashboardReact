@@ -18,14 +18,14 @@ import MenuContext from "./openMenu";
 const Sidebar = () => {
   const { openMenu } = useContext(MenuContext);
   const { setOpenMenu } = useContext(MenuContext);
+  
 
   return (
     <div
-      className={`fixed  transition-transform duration-500 ease-in-out ${
-        openMenu ? "hidden md:block" : ""
-      } `}
+      className={`fixed  z-30 transition-transform duration-500 ease-in-out
+       ${openMenu ? "hidden md:block" : ""} `}
     >
-      <div className='bg-black fixed p-50 text-white h-full w-[208px] flex flex-col items-center justify-center z-10  '>
+      <div className='bg-black fixed p-50 text-white h-full w-[208px] flex flex-col items-center justify-center   '>
         <div
           className='absolute  text-white top-2 right-2 cursor-pointer hover:scale-105 transition  md:hidden'
           onClick={() => {

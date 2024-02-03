@@ -8,6 +8,7 @@ import Sidebar from "./components/general/Sidebar";
 import Header from "./components/general/Header";
 import { MenuContext } from "./components/general/openMenu";
 import { HeaderTitle } from "./components/general/headerTitle";
+import ProfileLayout from "./components/general/ProfileLayout";
 
 const App = () => {
   const [headerTitle, setHeaderTitle] = useState("ala");

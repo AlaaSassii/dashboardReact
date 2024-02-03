@@ -9,7 +9,7 @@ const Header = ({ title }) => {
   const { setOpenMenu } = useContext(MenuContext);
 
   return (
-    <div className='py-2 px-6 bg-white flex justify-between items-center shadow-md shadow-black/5 sticky top-0 left-0 z-10 '>
+    <div className=' md:ml-52 py-2 px-6 bg-white flex justify-between items-center shadow-md shadow-black/5 sticky top-0 left-0 z-10 '>
       <div className='flex justify-center items-center cursor-pointer '>
         <div
           onClick={() => {

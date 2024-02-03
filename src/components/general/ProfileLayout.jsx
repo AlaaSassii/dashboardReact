@@ -4,10 +4,8 @@ const ProfileLayout = ({ children }) => {
   return (
     <div
       className='
-  pl-[218px]
-  pt-[100px]
-'
-    >
+      w-full p-2 md:w-[calc(100%-208px)] md:ml-52 min-h-screen transition-all main
+    '>
       {children}
     </div>
   );
