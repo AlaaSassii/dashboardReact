@@ -22,9 +22,10 @@ function createData(name, calories, fat, carbs) {
 const Inventory = () => {
   return (
     <ProfileLayout>
-      <div className='w-[100%] flex content-between '>
-        <TextField id='outlined-basic' label='Outlined' variant='outlined' />
-        <Button variant='contained'>Contained</Button>
+      <div className='w-[100%] flex justify-between items-center mb-5 mt-5 '>
+        
+        <TextField id='outlined-basic ' label='Outlined' variant='outlined'  />
+        <Button variant='contained' className="bg-black">Searsh</Button>
       </div>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label='simple table'>
