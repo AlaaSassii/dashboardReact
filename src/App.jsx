@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route, Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import Dashboard from "./pages/dashboard";
 import Approvals from "./pages/approvais";
@@ -16,6 +16,8 @@ import Machinery from "./pages/machinery";
 import Receipts from "./pages/receipts";
 import Sales from "./pages/sales";
 import Staffs from "./pages/staffs";
+import AddService from "./components/general/AddService";
+import AddNewWarehouse from "./components/warehouse/AddNewWarehouse";
 
 const App = () => {
   const [headerTitle, setHeaderTitle] = useState("ala");
@@ -30,7 +32,7 @@ const App = () => {
         <HeaderTitle.Provider value={titleHead}>
           <Sidebar />
           <Header title={headerTitle} />
-          {/* <div className='w-full md:w-[calc(100%-208px)] md:ml-52 min-h-screen transition-all main'> */}
+          {/* <AddNewWarehouse /> */}
           <Routes>
             <Route path='/' element={<Sidebar />} />
             <Route path='/dashboard' element={<Dashboard />} />
@@ -44,7 +46,6 @@ const App = () => {
             <Route path='/sales' element={<Sales />} />
             <Route path='/staffs' element={<Staffs />} />
           </Routes>
-          {/* </div> */}
         </HeaderTitle.Provider>
       </MenuContext.Provider>
     </>
@@ -52,5 +53,3 @@ const App = () => {
 };
 
 export default App;
-
-// aaaaa
