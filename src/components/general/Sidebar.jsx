@@ -23,7 +23,7 @@ const Sidebar = () => {
     <div
       className={`fixed  transition-transform duration-500 ease-in-out ${
         openMenu ? "hidden md:block" : ""
-      } fixed`}
+      } `}
     >
       <div className='bg-black fixed p-50 text-white h-full w-[208px] flex flex-col items-center justify-center z-10  '>
         <div
