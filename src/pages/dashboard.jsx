@@ -3,6 +3,7 @@ import StaffsUnpaidSalary from "../components/dashboard/StaffsUnpaidSalary";
 import TopProductsSales from "../components/dashboard/TopProductsSales";
 import HeaderTitle from "../components/general/headerTitle";
 import ProfileLayout from "../components/general/ProfileLayout";
+import UserData from "../components/dashboard/UserData";
 
 const Dashboard = () => {
   const { setHeaderTitle } = useContext(HeaderTitle);
@@ -26,30 +27,58 @@ const Dashboard = () => {
 
         <div className='grid  grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 max-h-[50vh] p-4'>
           <TopProductsSales
+            title={"rod"}
             Warehouse={"Warehouse One"}
             Remaining={"0000 rod"}
             Reorder={"1 rod"}
             RetailPricePerrod={"Rs. 100000"}
           />
           <TopProductsSales
+            title={"rod"}
             Warehouse={"Warehouse One"}
             Remaining={"0 rod"}
             Reorder={"1 rod"}
             RetailPricePerrod={"Rs. 100000"}
           />
           <TopProductsSales
+            title={"rod"}
             Warehouse={"Warehouse One"}
             Remaining={"0 rod"}
             Reorder={"1 rod"}
             RetailPricePerrod={"Rs. 100000"}
           />
           <TopProductsSales
+            title={"rod"}
             Warehouse={"Warehouse One"}
             Remaining={"0 rod"}
             Reorder={"1 rod"}
             RetailPricePerrod={"Rs. 100000"}
           />
         </div>
+
+        <div className='font-bold text-lg ml-5 mt-10 '>Top Products Sales</div>
+
+
+        <div className='grid  grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 max-h-[50vh] p-4'>
+          <UserData title={"rod"} TotalAmountSold={"5 rod"} TotalStockSold={"Rs. 500000"}/>
+          <UserData title={"Cement"} TotalAmountSold={"5 rod"} TotalStockSold={"Rs. 500000"}/>
+          <UserData title={"Cement"} TotalAmountSold={"5 rod"} TotalStockSold={"Rs. 500000"}/>
+        </div>
+
+        <div className='font-bold text-lg ml-5 mt-10 '>Staffs Unpaid Salary</div>
+
+        <div className='grid  grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 max-h-[50vh] p-4'>
+          <StaffsUnpaidSalary title={"Admin User"} date={"2024-01-25"} />
+          <StaffsUnpaidSalary title={"Admin User"} date={"2024-01-25"} />
+          <StaffsUnpaidSalary title={"Admin User"} date={"2024-01-25"} />
+          <StaffsUnpaidSalary title={"Admin User"} date={"2024-01-25"} />
+
+          <StaffsUnpaidSalary title={"Admin User"} date={"2024-01-25"} />
+          <StaffsUnpaidSalary title={"Admin User"} date={"2024-01-25"} />
+        </div>
+        
+
+
       </div>
     </ProfileLayout>
   );

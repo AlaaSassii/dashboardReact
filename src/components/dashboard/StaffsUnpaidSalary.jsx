@@ -2,14 +2,12 @@ import { FaRegCheckCircle } from "react-icons/fa";
 
 import React from "react";
 
-const StaffsUnpaidSalary = ({ number, title }) => {
+const StaffsUnpaidSalary = ({ title,date }) => {
   return (
-    <div className='flex flex-col justify-center items-center  p-4 mb-2 w-full bg-neutral-50 shadow-md rounded '>
-      <div className='mb-5 text-rose-500'>
-        <FaRegCheckCircle size={70} />
-      </div>
-      <div className=' font-bold text-lg mb-2'>{number}</div>
-      <div className='  text-sm'>{title}</div>
+    <div className="flex flex-col p-4 mb-2 w-full  bg-red-50 shadow-md rounded ">
+      <div className="font-bold font-lg mb-2 ">{title}</div>
+      <div className="flex "><div className="font-bold text-sm">Warehouse : </div><p>{date}</p></div>
+
     </div>
   );
 };
