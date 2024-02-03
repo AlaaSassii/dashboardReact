@@ -1,9 +1,9 @@
 import React from "react";
 
-const TopProductsSales = ({ Warehouse,Remaining,Reorder,RetailPricePerrod }) => {
+const TopProductsSales = ({ title,Warehouse,Remaining,Reorder,RetailPricePerrod }) => {
   return (
     <div className="flex flex-col p-4 mb-2 w-full  bg-red-50 shadow-md rounded ">
-      <div className="font-bold font-lg mb-2 ">Pod</div>
+      <div className="font-bold font-lg mb-2 ">{title}</div>
       <div className="flex "><div className="font-bold text-sm">Warehouse : </div><p>{Warehouse}</p></div>
       <div className="flex"><div className="font-bold text-sm">Remaining Stock : </div>{Remaining}</div>
       <div className="flex"><div className="font-bold text-sm">Reorder Point : </div>{Reorder}</div>
