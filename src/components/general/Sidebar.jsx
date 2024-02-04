@@ -25,7 +25,7 @@ const Sidebar = () => {
         openMenu ? "hidden md:block" : ""
       } fixed`}
     >
-      <div className='bg-black fixed p-50 text-white h-full w-[208px] flex flex-col items-center justify-center z-10  '>
+      <div className='bg-black fixed p-50 text-white h-full w-[208px] flex flex-col items-center justify-center z-10'>
         <div
           className='absolute  text-white top-2 right-2 cursor-pointer hover:scale-105 transition  md:hidden'
           onClick={() => {
