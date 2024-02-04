@@ -62,13 +62,18 @@ const AddNewSite = () => {
             />
           </div>
         </div>
-        <div className='mt-4 '>
-          <Button variant='outlined' className='mr-3'>
-            Save
-          </Button>
-          <Button variant='outlined' color='error'>
-            Cancel
-          </Button>
+        <div className='mt-4 flex justify-center items-center  '>
+          <div className="mr-5">
+            <Button variant='outlined'>
+              Save
+            </Button>
+          </div>
+          <div className="mr-5">
+            <Button variant='outlined' color='error'>
+              Cancel
+            </Button>
+          </div>
+          
         </div>
       </form>
     </AddService>

@@ -6,7 +6,7 @@ const AddNewWarehouse = () => {
   return (
     <AddService HeaderTitle='Add New Warehouse'>
       <form action=''>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 '>
           <div>
             <label htmlFor=''>Name of the warehouse </label>
             <br />
@@ -46,13 +46,18 @@ const AddNewWarehouse = () => {
             />
           </div>
         </div>
-        <div className='mt-4 '>
-          <Button variant='outlined' className='mr-3'>
-            Save
-          </Button>
-          <Button variant='outlined' color='error'>
-            Cancel
-          </Button>
+        <div className='mt-4 flex justify-center items-center  '>
+          <div className="mr-5">
+            <Button variant='outlined'>
+              Save
+            </Button>
+          </div>
+          <div className="mr-5">
+            <Button variant='outlined' color='error'>
+              Cancel
+            </Button>
+          </div>
+          
         </div>
       </form>
     </AddService>
