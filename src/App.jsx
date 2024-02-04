@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import("tailwindcss").Config;
-import { Route, Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import Dashboard from "./pages/dashboard";
 import Approvals from "./pages/approvais";
@@ -9,7 +8,15 @@ import Sidebar from "./components/general/Sidebar";
 import Header from "./components/general/Header";
 import { MenuContext } from "./components/general/openMenu";
 import { HeaderTitle } from "./components/general/headerTitle";
-import Input from "./components/general/Input";
+import Warehouses from "./pages/warehouse";
+import Groups from "./pages/groups";
+import Sites from "./pages/sites";
+import Inventory from "./pages/inventory";
+import Machinery from "./pages/machinery";
+import Receipts from "./pages/receipts";
+import Sales from "./pages/sales";
+import Staffs from "./pages/staffs";
+
 
 const App = () => {
   const [headerTitle, setHeaderTitle] = useState("ala");
@@ -21,31 +28,28 @@ const App = () => {
   return (
     <>
       <MenuContext.Provider value={menuValue}>
-      
-        <Sidebar />
-        <div className="w-full md:w-[calc(100%-208px)] md:ml-52 min-h-screen transition-all main">
+        <HeaderTitle.Provider value={titleHead}>
+          <Sidebar />
           <Header title={headerTitle} />
+          
+          {/* <AddNewWarehouse /> */}
           <Routes>
-            <Route path='/' element={<h1>/warehouses</h1>} />
-            <Route path='/dashboard' element={<h1>/warehouses</h1>} />
-            <Route path='/approvals' element={<Approvals>} />
-            <Route path='/warehouses' element={<h1>/warehouses</h1>} />
-            <Route path='/groups' element={<h1>/groups</h1>} />
-            <Route path='/sites' element={<h1>/sites</h1>} />
-            <Route path='/inventory' element={<h1>/inventory</h1>} />
-            <Route path='/machinery' element={<h1>/machinery</h1>} />
-            <Route path='/receipts' element={<h1>/receipts</h1>} />
-            <Route path='/sales' element={<h1>/sales</h1>} />
-            <Route path='/staffs' element={<h1>/staffs</h1>} />
+            <Route path='/' element={<Sidebar />} />
+            <Route path='/dashboard' element={<Dashboard />} />
+            <Route path='/approvals' element={<Approvals />} />
+            <Route path='/warehouses' element={<Warehouses />} />
+            <Route path='/groups' element={<Groups />} />
+            <Route path='/sites' element={<Sites />} />
+            <Route path='/inventory' element={<Inventory />} />
+            <Route path='/machinery' element={<Machinery />} />
+            <Route path='/receipts' element={<Receipts />} />
+            <Route path='/sales' element={<Sales />} />
+            <Route path='/staffs' element={<Staffs />} />
           </Routes>
-      </div>
-      
-
+        </HeaderTitle.Provider>
       </MenuContext.Provider>
     </>
   );
 };
 
 export default App;
-
-// aaaaa
