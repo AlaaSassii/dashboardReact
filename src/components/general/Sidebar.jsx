@@ -22,10 +22,10 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`fixed  z-30 transition-transform duration-500 ease-in-out
+      className={`fixed  z-30 transition-transform duration-500 ease-in-out 
        ${openMenu ? "hidden md:block" : ""} `}
     >
-      <div className='bg-black fixed p-50 text-white h-full w-[208px] flex flex-col items-center justify-center   '>
+      <div className='bg-black fixed p-50 text-white h-full w-[208px] flex flex-col items-center justify-center    '>
         <div
           className='absolute  text-white top-2 right-2 cursor-pointer hover:scale-105 transition  md:hidden'
           onClick={() => {
@@ -42,15 +42,10 @@ const Sidebar = () => {
           className='pt-5 pb-5'
         />
 
-        <div className='flex flex-col  h-full overflow-y-hidden'>
+        <div className='flex flex-col h-screen overflow-y-auto'>
           <SidebarLink title='Dashboard' to='dashboard' icon={MdDashboard} />
           <SidebarLink title='approvals' to='approvals' icon={FaCheckCircle} />
-
-          <SidebarLink
-            title='Warehouses'
-            to='warehouses'
-            icon={FaHouseChimney}
-          />
+          <SidebarLink title='Warehouses' to='warehouses' icon={FaHouseChimney}/>
           <SidebarLink title='Groups' to='groups' icon={MdGroups} />
           <SidebarLink title='Sites' to='sites' icon={TbTableOptions} />
           <SidebarLink title='Inventory' to='inventory' icon={MdInventory} />
@@ -58,6 +53,7 @@ const Sidebar = () => {
           <SidebarLink title='Receipts' to='receipts' icon={IoReceipt} />
           <SidebarLink title='Sales' to='sales' icon={AiFillDollarCircle} />
           <SidebarLink title='Staffs' to='staffs' icon={FaUserGroup} />
+          
         </div>
       </div>
     </div>
