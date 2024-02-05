@@ -4,6 +4,7 @@ import TopProductsSales from "../components/dashboard/TopProductsSales";
 import HeaderTitle from "../components/general/headerTitle";
 import ProfileLayout from "../components/general/ProfileLayout";
 import UserData from "../components/dashboard/UserData";
+import InformationCart from "../components/dashboard/InformationCart";
 
 const Dashboard = () => {
   const { setHeaderTitle } = useContext(HeaderTitle);
@@ -15,6 +16,26 @@ const Dashboard = () => {
   return (
     <ProfileLayout>
       <div className='flex flex-col '>
+
+        <div className='font-semibold text-xl ml-5 mt-5'>Site Information</div>
+        <div className='grid  grid-cols-1   xl:grid-cols-2  gap-4 max-h-[50vh] p-4'>
+            <InformationCart date="Feb ,5 2024"
+                             title="Site 1"
+                             numRequest={3}
+            />
+            <InformationCart date="Feb ,5 2024"
+                             title="Site 1"
+                             numRequest={3}
+            />
+            <InformationCart date="Feb ,5 2024"
+                             title="Site 1"
+                             numRequest={3}
+            />
+            
+        </div>
+        
+
+        {/*
         <div className='font-bold text-lg ml-5 mt-5'>Welcome User!</div>
 
         <div className='grid  grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 max-h-[50vh] p-4'>
@@ -77,9 +98,9 @@ const Dashboard = () => {
           <StaffsUnpaidSalary title={"Admin User"} date={"2024-01-25"} />
         </div>
         
+      */}
 
-
-      </div>
+    </div>
     </ProfileLayout>
   );
 };
