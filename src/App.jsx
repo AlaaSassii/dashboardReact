@@ -16,6 +16,7 @@ import Machinery from "./pages/machinery";
 import Receipts from "./pages/receipts";
 import Sales from "./pages/sales";
 import Staffs from "./pages/staffs";
+import Modal from "./components/general/Modal";
 const App = () => {
   const [headerTitle, setHeaderTitle] = useState("ala");
   const [openMenu, setOpenMenu] = useState(false);
@@ -30,7 +31,6 @@ const App = () => {
           <Sidebar />
           <Header title={headerTitle} />
           <Routes>
-            <Route path='/' element={<Sidebar />} />
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/approvals' element={<Approvals />} />
             <Route path='/warehouses' element={<Warehouses />} />
