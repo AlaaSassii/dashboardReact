@@ -16,8 +16,6 @@ import Machinery from "./pages/machinery";
 import Receipts from "./pages/receipts";
 import Sales from "./pages/sales";
 import Staffs from "./pages/staffs";
-
-
 const App = () => {
   const [headerTitle, setHeaderTitle] = useState("ala");
   const [openMenu, setOpenMenu] = useState(false);
@@ -31,8 +29,6 @@ const App = () => {
         <HeaderTitle.Provider value={titleHead}>
           <Sidebar />
           <Header title={headerTitle} />
-          
-          {/* <AddNewWarehouse /> */}
           <Routes>
             <Route path='/' element={<Sidebar />} />
             <Route path='/dashboard' element={<Dashboard />} />
